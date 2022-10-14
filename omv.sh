@@ -30,10 +30,12 @@ omv-confdbadm populate
 # Display the login information.
 cat /etc/issue
 
+# Install CURL
+sudo apt-get install curl -y
 
 #ZEROIER
 
-curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | gpg --import && \
+sudo curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | gpg --import && \
 if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bash; fi
 
 #ZEROIER JOIN
